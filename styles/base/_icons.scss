@@ -1,0 +1,71 @@
+@import '../fonts/icons/icons';
+
+.icon-chat:before {
+  content: "\e913";
+}
+
+.icon-cheveron-outline-left:before {
+  content: "\e900";
+}
+.icon-cheveron-outline-right:before {
+  content: "\e901";
+}
+.icon-send:before {
+  content: "\e902";
+}
+.icon-share-alt:before {
+  content: "\e903";
+}
+.icon-view-show:before {
+  content: "\e904";
+}
+.icon-heart:before {
+  content: "\e905";
+}
+.icon-share-circule:before {
+  content: "\e906";
+}
+.icon-arrow-down:before {
+  content: "\e907";
+}
+.icon-Circle-icons-heart .path1:before {
+  content: "\e908";
+}
+.icon-Circle-icons-heart .path2:before {
+  content: "\e909";
+  margin-left: -1em;
+  opacity: 0.2;
+}
+.icon-Circle-icons-heart .path3:before {
+  content: "\e90a";
+  margin-left: -1em;
+}
+.icon-Instagram-Logowine .path1:before {
+  content: "\e90b" ;
+}
+.icon-Instagram-Logowine .path2:before {
+  content: "\e90c";
+  margin-left: -1.5em;
+}
+.icon-Instagram-Logowine .path3:before {
+  content: "\e90d";
+  margin-left: -1.5em;
+}
+.icon-Telegram-Icon .path1:before {
+  content: "\e90e";
+}
+.icon-Telegram-Icon .path2:before {
+  content: "\e90f";
+  margin-left: -1em;
+}
+.icon-Telegram-Icon .path3:before {
+  content: "\e910";
+  margin-left: -1em;
+}
+.icon-Telegram-Icon .path4:before {
+  content: "\e911";
+  margin-left: -1em;
+}
+.icon-facebook:before {
+  content: "\e912";
+}

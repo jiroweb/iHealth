@@ -1,0 +1,56 @@
+@import "./shared", "./normalize", "./flex-box", "./root", "./icons",
+  // modules
+    "../modules/slick-slider";
+
+// container  -- START
+.container {
+  max-width: 1400px;
+  width: 100%;
+  padding: 0 22px;
+  margin: 0 auto;
+
+  @include lg {
+    padding: 0 15px;
+  }
+  @include xs {
+    padding: 0 10px;
+  }
+}
+// container  -- END
+
+// repeat-codes -- Start
+.leftbar-title {
+  font: 20px $Bold;
+  line-height: 23px;
+  color: #000000;
+}
+.main-title {
+    font: 24px $Bold;
+  line-height: 28px;
+  color: #000000;
+  @include xs {
+    margin-left: 10px;
+    font: 20px $Bold;
+    line-height: 20px;
+
+  }
+}
+// repeat-codes -- END
+
+// display-none-block -- START
+.d_none {
+  display: none;
+}
+
+.d_block {
+  display: block;
+}
+
+// display-none-block -- END
+
+// overflow-hidden -- START
+.overflow-hidden {
+  overflow: hidden;
+}
+
+// // overflow-hidden -- END

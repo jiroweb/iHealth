@@ -1,0 +1,20 @@
+// FONT FAMILY NAME AS VARS
+$Bold: 'Roboto-Bold',
+sans-serif; // bold
+
+$Regular: 'Roboto-Regular',
+sans-serif; // normal
+
+
+
+$font-path:'../assets/fonts/roboto/';
+$list: 'Roboto-Regular' 'Roboto-Bold';
+
+@each $name in $list {
+    $src: $font-path + $name;
+
+    @font-face {
+        src: url($src + '.ttf') format('truetype');
+        font-family: $name;
+    }
+}

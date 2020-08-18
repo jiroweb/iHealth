@@ -1,0 +1,29 @@
+.health {
+  &-leftbar {
+    position: relative;
+    margin-right: 42px;
+    &::before {
+      position: absolute;
+      content: "";
+      border: 1px solid #cfcfcf;
+      height: 1265px;
+      right: -25%;
+      top: 10px;
+    }      
+    @include sm{
+        display: none;
+    }
+
+    &__list{
+        &--block{
+                margin-bottom: 30px;
+            &-img{
+                width: 173px;
+
+            }
+        }
+    }
+
+ 
+  }
+}
