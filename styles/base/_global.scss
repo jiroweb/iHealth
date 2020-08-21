@@ -23,16 +23,18 @@
   font: 20px $Bold;
 line-height: 23px;
 color: #000000;
+@include xs {
+  margin-left: 5px;
+  font: 16px $Bold;
+}
 }
 .main-title {
     font: 24px $Bold;
   line-height: 28px;
   color: #000000;
   @include xs {
-    margin-left: 10px;
     font: 20px $Bold;
     line-height: 20px;
-
   }
 }
 // repeat-codes -- END

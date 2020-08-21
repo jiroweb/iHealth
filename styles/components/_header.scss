@@ -231,11 +231,14 @@
     }
     @include sm {
       padding: 0 10px;
+      height: auto;
     }
     @include xs {
       display: flex;
       width: 100%;
       justify-content: space-between;
+      height: 53px;
+
     }
     &__box {
       height: 100%;

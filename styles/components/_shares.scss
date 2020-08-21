@@ -1,0 +1,284 @@
+@import "../../styles/base/shared";
+
+.shares {
+  &-list {
+    &__block {
+      &--slide {
+        &-list {
+          &__item {
+            &--main {
+              &-img {
+                width: 100%;
+                height: 300px;
+                @include sm {
+                  height: 200px;
+                }
+              }
+            }
+          }
+        }
+      }
+      &--info {
+        margin-top: 29px;
+        @include xs {
+          overflow: auto;
+          margin-top: 15px;
+
+        }
+        &-list {
+          margin: 0 -17px;
+          @include lg {
+            margin: 0 -14px;
+          }
+          @include xs {
+            flex-wrap: nowrap;
+            margin: 0 -5px;
+          }
+          &__single {
+            padding: 0 17px 14px;
+            width: 33.33%;
+            @include lg {
+              width: 50%;
+              padding: 0 14px 14px;
+            }
+            @include xs {
+              width: 100%;
+              padding: 0 5px 5px;
+            }
+            &--news {
+              border-radius: 10px;
+              background-color: #f0f0f0;
+              &-img {
+                border-radius: 10px;
+                width: 100%;
+                height: 161px;
+                margin-bottom: 10px;
+                @include xs {
+                  height: auto;
+                  width: 270px;
+
+                }
+              }
+              &-text {
+                padding: 0 10px 10px;
+                h6 {
+                  font: 18px $Bold;
+                  line-height: 21px;
+                  color: #000000;
+                  margin-bottom: 5px;
+                  @include sm {
+                    font: 16px $Bold;
+                    line-height: 18px;
+                  }
+                  @include xs {
+                    font: 14px $Bold;
+                    line-height: 14px;
+                  }
+                }
+                & > p {
+                  font-size: 14px;
+                  line-height: 16px;
+                  color: #000000;
+                  margin-bottom: 40px;
+                  @include lg {
+                    margin-bottom: 25px;
+                  }
+                  @include sm {
+                    line-height: 14px;
+                    font-size: 12px;
+                    margin-bottom: 10px;
+                  }
+                  @include xs{
+                    line-height: 12px;
+                    margin-bottom: 7px;
+                  }
+                }
+                &__take {
+                  & > p {
+                    font: 20px $Bold;
+                    color: #000000;
+                    @include sm {
+                      font: 16px $Bold;
+                    }
+                    @include xs {
+                        font: 14px $Bold;
+                      }
+                  }
+                  &--btn {
+                    button {
+                      background: #ff9900;
+                      border-radius: 12px;
+                      color: white;
+                      font-size: 20px;
+                      padding: 6px 39px;
+                      @include sm {
+                        font-size: 16px;
+                        padding: 6px 33px;
+                      }
+                      @include xs {
+                        font-size: 14px;
+                        padding: 6px 25px;
+
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      &--promocode {
+        margin-top: 45px;
+        @include lg {
+          margin-top: 25px;
+        }
+        @include sm {
+          margin-top: 10px;
+        }
+        h3 {
+          font: 24px $Bold;
+          color: #000000;
+          margin-bottom: 15px;
+          @include sm {
+            font: 20px $Bold;
+          }
+        }
+        &-block {
+          margin: 0 -10px;
+          @include lg {
+            flex-wrap: wrap;
+          }
+          &__list {
+            padding: 0 10px;
+            width: 50%;
+            @include lg {
+              width: 100%;
+              padding-bottom: 10px;
+            }
+            &--item {
+              background: #f0f0f0;
+              border-radius: 27px;
+              padding: 9px 34px 12px 24px;
+              @include xs{
+                padding: 10px;
+
+              }
+              &-info {
+                margin-bottom: 26px;
+                @include sm {
+                  margin-bottom: 15px;
+                }
+                @include xs {
+                    margin-bottom: 10px;
+                  }
+                &__img {
+                  width: 117px;
+                  height: 65px;
+                  @include xs{
+                    width: 75px;
+                    height: 35px;
+                  }
+                }
+                &__text {
+                  width: 270px;
+                  @include xs{
+                    width: unset;
+                    margin-left: 20px;
+                  }
+                  span {
+                    font-size: 12px;
+                    color: #949494;
+                    margin-bottom: 8px;
+                    display: block;
+                    @include xs{
+                        font-size: 10px;
+                        margin-bottom: 5px;
+                    }
+                  }
+                  h6 {
+                    font: 18px $Bold;
+                    margin-bottom: 6px;
+                    color: #000000;
+                    @include sm {
+                      font: 16px $Bold;
+                    }
+                    @include xs {
+                        font: 13px $Bold;
+                      }
+                    
+                  }
+                  p {
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: #000000;
+                    @include sm {
+                      font: 12px $Bold;
+                    }
+                    @include xs {
+                        font-size: 12px;
+                        line-height: 12px;
+
+                    }
+
+                  }
+                }
+              }
+              &-share {
+                &__main {
+                  font-size: 12px;
+                  line-height: 14px;
+                  color: #898989;
+                  i {
+                    margin-right: 5px;
+                  }
+                }
+                &__btn {
+                  background: rgba(30, 201, 47, 0.55);
+                  border-radius: 9px;
+                  padding: 16px 8px;
+                  @include xs{
+                    padding: 7px 5px;
+                  }
+                  span {
+                    font-size: 12px;
+                    color: #000000;
+                    @include xs{
+                        font-size: 10px;
+                    }
+                  }
+                  p {
+                    font: 16px $Bold;
+                    color: #ffffff;
+                    margin-left: 14px;
+                    @include xs{
+                        font: 13px $Bold;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      &--populars {
+        padding: 32px 20px 0;
+        background: #ffcf55;
+        margin: 53px -22px 40px -42px;
+        @include lg {
+          display: none;
+        }
+        & > h3 {
+          margin-bottom: 34px;
+        }
+        &-list {
+          margin: 0 -10px;
+          &__item {
+            padding: 0 10px;
+            width: 20%;
+          }
+        }
+      }
+    }
+  }
+}

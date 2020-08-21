@@ -1,8 +1,13 @@
+@import "../../styles/base/shared";
+
 .articles {
   &-main {
     &__text {
       margin: 0 30px 45px;
       position: relative;
+      @include sm {
+        margin: 0;
+      }
       &::before {
         position: absolute;
         content: "";
@@ -12,10 +17,16 @@
         opacity: 0.3;
         transform: matrix(1, 0, 0, -1, 0, 0);
         bottom: -45px;
+        @include sm {
+          display: none;
+        }
       }
       &--title {
         margin-bottom: 52px;
         position: relative;
+        @include xs {
+          margin-bottom: 0;
+        }
         &::before {
           position: absolute;
           content: "";
@@ -29,14 +40,24 @@
         &-share {
           font-size: 14px;
           color: #acacac;
+          @include xs {
+            font-size: 12px;
+          }
           &__info {
             color: #dc7414;
             p {
               font: 14px $Bold;
               margin-right: 7px;
+              @include xs {
+                font: 12px $Bold;
+                margin-right: 5px;
+              }
             }
             i {
               font-size: 22px;
+              @include xs {
+                font-size: 18px;
+              }
             }
           }
         }
@@ -51,14 +72,27 @@
             width: 425px;
             height: 248px;
             margin: 40px 0;
+            @include xs {
+              width: 100%;
+              height: auto;
+              margin: 15px 0;
+            }
           }
           p {
             font-size: 16px;
             line-height: 19px;
             color: #000000;
-            &+p{
-                margin-top: 15px;
+            @include xs {
+              font-size: 14px;
+              line-height: 16px;
             }
+            & + p {
+              margin-top: 15px;
+              @include xs {
+                margin-top: 10px;
+              }
+            }
+
             a {
               text-decoration: underline;
               color: #2a9f37;
@@ -68,13 +102,23 @@
         }
         &-second {
           margin-top: 30px;
+          @include xs {
+            margin-top: 15px;
+          }
           h3 {
             font: 20px $Bold;
+            @include xs {
+              font: 16px $Bold;
+            }
           }
           p {
             font-size: 16px;
             line-height: 19px;
             color: #000000;
+            @include xs {
+              font-size: 14px;
+              line-height: 16px;
+            }
           }
         }
       }
@@ -82,6 +126,9 @@
     &__readnow {
       margin-left: 19px;
       position: relative;
+      @include sm {
+        display: none;
+      }
       &::before {
         position: absolute;
         content: "";
@@ -150,8 +197,12 @@
       }
     }
   }
-  .all-news{
-      margin-top: 80px;
-      margin-left: 42px;
+  & > .all-news {
+    margin-top: 80px;
+    margin-left: 42px;
+    @include sm {
+      margin-left: 0;
+      margin-top: 30px;
+    }
   }
 }

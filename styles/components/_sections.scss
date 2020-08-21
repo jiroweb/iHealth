@@ -54,19 +54,20 @@
           overflow: auto;
         }
         &-single {
-          margin-bottom: 27px;
-          border: 1px solid #87bd82;
-          padding: 4px 20px 6px;
-          background-color: white;
-          @include sm{
-            margin-bottom: 10px;
-          }
-          @include xs{
-            margin-left: 5px;
-            margin-right: 5px;
-          }
+        
 
           &__info {
+            margin-bottom: 27px;
+            border: 1px solid #87bd82;
+            padding: 4px 20px 6px;
+            background-color: white;
+            @include sm{
+              margin-bottom: 10px;
+            }
+            @include xs{
+              margin-left: 5px;
+              margin-right: 5px;
+            }
             &--img {
               width: 145px;
               height: 145px;
