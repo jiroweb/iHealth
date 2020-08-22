@@ -2,486 +2,558 @@
 
 
 .mainblog {
-  padding-top: 36px;
-  position: relative;
-  @include sm {
-    padding-top: 20px;
-  }
-  @include xs{
-    padding-top: 0;
-}
+   padding-top: 36px;
+   position: relative;
 
-  &::before {
-    content: "";
-    position: absolute;
-    border-bottom: 1px solid #87bd82;
-    max-width: 1260px;
-    width: 100%;
-    transform: translateX(-50%);
-    left: 50%;
-    @include xs{
-        display: none;
-  }
-}
+   @include sm {
+      padding-top: 20px;
+   }
 
-  &-list {
-    padding-top: 22px;
-    @include sm {
-      padding-top: 15px;
-      flex-direction: column-reverse;
-    }
-  
-    &__leftbar {
-      width: 188px;
-      @include sm{
-        width: unset;
-      }
-      @include xs{
-        background-color: #FFCF55;
-        margin: 0 -10px;
-        padding-top: 10px;
-      }
-      h3 {
-        margin-bottom: 20px;
-      }
+   @include xs {
+      padding-top: 0;
+   }
 
-      &--populars {
-        @include sm{
-          display: flex;
-          justify-content: space-between;
-        }
-        @include xs{
-          overflow: auto;
-        }
-        &-single {
-        
-
-          &__info {
-            margin-bottom: 27px;
-            border: 1px solid #87bd82;
-            padding: 4px 20px 6px;
-            background-color: white;
-            @include sm{
-              margin-bottom: 10px;
-            }
-            @include xs{
-              margin-left: 5px;
-              margin-right: 5px;
-            }
-            &--img {
-              width: 145px;
-              height: 145px;
-            }
-
-            &--name {
-              margin-top: 10px;
-
-              h5 {
-                font-size: 16px;
-                line-height: 19px;
-                color: #5b76ff;
-              }
-
-              &-stars {
-                margin: 3px 0 12px;
-
-                p {
-                  font-size: 12px;
-                  color: #000000;
-                }
-
-                &__img {
-                  width: 70px;
-                  height: 16px;
-                  margin-left: 4px;
-                }
-              }
-
-              &-price {
-                p {
-                  font: 16px $Bold;
-                  letter-spacing: -0.03em;
-                  color: #bd3c37;
-                }
-
-                span {
-                  font: 10px $Bold;
-                  text-decoration-line: line-through;
-                  color: #999999;
-                  margin: 4px 0 0 8px;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
-    &__rightbar {
-      padding-left: 42px;
+   &::before {
+      content: "";
+      position: absolute;
+      border-bottom: 1px solid #87bd82;
+      max-width: 1260px;
       width: 100%;
-      @include sm{
-        padding-left: 0;
+      transform: translateX(-50%);
+      left: 50%;
+
+      @include xs {
+         display: none;
       }
-      &--promocode {
-        width: 100%;
-        border-radius: 10px;
-        padding: 12px 12px 12px 8px;
-        background-color: #00ac64;
-        @include xs{
-          width: 95%;
-          margin: 0 auto;
-          }
+   }
 
-        p {
-          font: 18px $Regular;
-          color: #ffffff;
-          @include sm{
-            font: 16px $Regular;
-          }
-          @include xs{
-            font: 10px $Regular;
-          }
-          
-        }
+   &-list {
+      padding-top: 22px;
 
-        &-btn {
-          button {
-            background-color: #00ff66;
-            border-radius: 12px;
-            padding: 6px 17px;
-            font: 22px $Bold;
-            color: #ffffff;
-            @include sm{
-              font: 19px "Roboto-Bold", sans-serif;
+      @include sm {
+         padding-top: 15px;
+         flex-direction: column-reverse;
+      }
+
+      &__leftbar {
+         width: 188px;
+
+         @include sm {
+            width: unset;
+         }
+
+         @include xs {
+            background-color: #FFCF55;
+            margin: 0 -10px;
+            padding-top: 10px;
+         }
+
+         h3 {
+            margin-bottom: 20px;
+         }
+
+         &--populars {
+            @include sm {
+               display: flex;
+               justify-content: space-between;
             }
-            @include xs{
-              font: 12px "Roboto-Bold", sans-serif;
+
+            @include xs {
+               overflow: auto;
             }
-          }
-        }
-      }
-    }
 
-    &__email {
-      width: 100%;
-      margin: 33px 0;
-      padding: 12px 50px 12px 32px;
-      border: 1px solid #8d1c0d;
-      border-radius: 10px;
-      background-color: white;
-      @include xs{
-        flex-direction: column;
-      }
-      @include lg {
-        padding: 10px 10px 10px 18px;
-      }
-      @include xs{
-        padding: 8px;
-      }
-      p {
-        font: 16px $Bold;
-        color: #000000;
-        @include lg {
-          font: 14px $Bold;
-          margin-left: 10px;
-        }
-        @include xs{
-          margin-bottom: 10px;
-          font: 12px $Bold;
+            &-single {
 
-        }
+
+               &__info {
+                  margin-bottom: 27px;
+                  border: 1px solid #87bd82;
+                  padding: 4px 20px 6px;
+                  background-color: white;
+
+                  @include sm {
+                     margin-bottom: 10px;
+                  }
+
+                  @include xs {
+                     margin-left: 5px;
+                     margin-right: 5px;
+                  }
+
+                  &--img {
+                     width: 145px;
+                     height: 145px;
+                  }
+
+                  &--name {
+                     margin-top: 10px;
+
+                     h5 {
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #5b76ff;
+                     }
+
+                     &-stars {
+                        margin: 3px 0 12px;
+
+                        p {
+                           font-size: 12px;
+                           color: #000000;
+                        }
+
+                        &__img {
+                           width: 70px;
+                           height: 16px;
+                           margin-left: 4px;
+                        }
+                     }
+
+                     &-price {
+                        p {
+                           font: 16px $Bold;
+                           letter-spacing: -0.03em;
+                           color: #bd3c37;
+                        }
+
+                        span {
+                           font: 10px $Bold;
+                           text-decoration-line: line-through;
+                           color: #999999;
+                           margin: 4px 0 0 8px;
+                        }
+                     }
+                  }
+               }
+            }
+         }
       }
 
-      &--info {
-        max-width: 235px;
-        width: 100%;
-        padding: 9px;
-        background: #fff7f7;
-        border: 1px solid #ff8a00;
-        border-radius: 12px;
-        margin-right: 10px;
-        @include xs{
-          max-width: 155px;
-          padding: 3px;
-          margin-right: 7px;
-        }
-        input{
-          width: 200px;
-          font-size: 14px;
-          background: #fff7f7;
-          @include xs{
-            font-size: 9px;
-            width: 140px;
-          }
-        }
+      &__rightbar {
+         padding-left: 42px;
+         width: 100%;
+
+         @include sm {
+            padding-left: 0;
+         }
+
+         &--promocode {
+            width: 100%;
+            border-radius: 10px;
+            padding: 12px 12px 12px 8px;
+            background-color: #00ac64;
+
+            @include xs {
+               width: 95%;
+               margin: 0 auto;
+            }
+
+            p {
+               font: 18px $Regular;
+               color: #ffffff;
+
+               @include sm {
+                  font: 16px $Regular;
+               }
+
+               @include xs {
+                  font: 10px $Regular;
+               }
+
+            }
+
+            &-btn {
+               button {
+                  background-color: #00ff66;
+                  border-radius: 12px;
+                  padding: 6px 17px;
+                  font: 22px $Bold;
+                  color: #ffffff;
+
+                  @include sm {
+                     font: 19px "Roboto-Bold", sans-serif;
+                  }
+
+                  @include xs {
+                     font: 12px "Roboto-Bold", sans-serif;
+                  }
+               }
+            }
+         }
       }
 
-      &--btn {
-        button {
-          padding: 11px 36px;
-          background: #f77702;
-          border-radius: 12px;
-          font: 14px $Bold;
-          color: #ffffff;
-          @include xs{
+      &__email {
+         width: 100%;
+         margin: 33px 0;
+         padding: 12px 50px 12px 32px;
+         border: 1px solid #8d1c0d;
+         border-radius: 10px;
+         background-color: white;
+
+         @include xs {
+            flex-direction: column;
+         }
+
+         @include lg {
+            padding: 10px 10px 10px 18px;
+         }
+
+         @include xs {
+            padding: 8px;
+         }
+
+         p {
+            font: 16px $Bold;
+            color: #000000;
+
+            @include lg {
+               font: 14px $Bold;
+               margin-left: 10px;
+            }
+
+            @include xs {
+               margin-bottom: 10px;
+               font: 12px $Bold;
+
+            }
+         }
+
+         &--info {
+            max-width: 235px;
+            width: 100%;
             padding: 9px;
-    font: 9px "Roboto-Bold", sans-serif;
-          }
-        }
+            background: #fff7f7;
+            border: 1px solid #ff8a00;
+            border-radius: 12px;
+            margin-right: 10px;
+
+            @include xs {
+               max-width: 155px;
+               padding: 3px;
+               margin-right: 7px;
+            }
+
+            input {
+               width: 200px;
+               font-size: 14px;
+               background: #fff7f7;
+
+               @include xs {
+                  font-size: 9px;
+                  width: 140px;
+               }
+            }
+         }
+
+         &--btn {
+            button {
+               padding: 11px 36px;
+               background: #f77702;
+               border-radius: 12px;
+               font: 14px $Bold;
+               color: #ffffff;
+
+               @include xs {
+                  padding: 9px;
+                  font: 9px "Roboto-Bold", sans-serif;
+               }
+            }
+         }
       }
-    }
-  }
+   }
 }
 
 .news {
-  &-list {
-    margin-top: 22px;
-    @include xs{
-      display: flex;
-      overflow: auto;
-      margin: 10px -10px 0;
-    }
-    &__type {
-      margin-bottom: 11px;
-      &--form {
-        background: #f2f2f2;
-        border-radius: 10px;
-        @include xs{
-          flex-direction: column;
-            margin-left: 5px;
-            margin-right: 5px;
-        }
-        &-img {
-          img {
+   &-list {
+      margin-top: 22px;
+
+      @include xs {
+         display: flex;
+         overflow: auto;
+         margin: 10px -10px 0;
+      }
+
+      &__type {
+         margin-bottom: 11px;
+
+         &--form {
+            background: #f2f2f2;
             border-radius: 10px;
-          }
-        }
-        &-info {
-          padding: 12px 10px 11px 25px;
-          @include lg {
-            padding: 5px 5px 5px 15px;
-          }
 
-          &__text {
-            margin-bottom: 11px;
-            @include xs{
-              margin-bottom: 5px;
+            &-img {
+               img {
+                  border-radius: 10px;
+               }
             }
-            h3 {
-              font: 24px $Bold;
-              color: #000000;
-              margin-bottom: 22px;
-              @include lg {
-                font: 20px $Bold;
-              }
-              @include sm {
-                font: 17px $Bold;
-                margin-bottom: 14px;
-              }
-              @include xs {
-                font: 12px $Bold;
-                margin-bottom: 5px;
-              }
-            }
-            p {
-              margin-top: 14px;
-              font-size: 14px;
-              line-height: 16px;
-              color: #474747;
-              @include xs {
-                margin-top: 5px;
-                font: 10px $Bold;
-                line-height: 14px;
 
-              }
-            }
-          }
+            &-info {
+               padding: 12px 10px 11px 25px;
 
-          &__likes {
-            &--messege {
-              margin-right: 21px;
-              @include lg {
-                margin-right: 10px;
-              }
-              @include xs{
-                margin-right: 5px;
-              }
-              span {
-                display: block;
-                font: 18px $Bold;
-                color: #acacac;
-                @include lg {
-                  font: 14px $Bold;
-                }
-                @include xs{
-                  font: 10px $Bold;
-                }  
+               @include lg {
+                  padding: 5px 5px 5px 15px;
+               }
 
-              }
-              i {
-                font-size: 21px;
-                margin-right: 7px;
-                @include lg {
-                  font-size: 17px;
-                }
-                @include xs {
-                  font-size: 12px;
-                  margin-right: 5px;
-                }
-              }
-              img {
-                margin-right: 7px;
-                width: 21px;
-                height: 21px;
-                @include lg {
-                  width: 15px;
-                  height: 15px;
-                }
-              }
+               &__text {
+                  margin-bottom: 11px;
+
+                  @include xs {
+                     margin-bottom: 5px;
+                  }
+
+                  h3 {
+                     font: 24px $Bold;
+                     color: #000000;
+                     margin-bottom: 22px;
+
+                     @include lg {
+                        font: 20px $Bold;
+                     }
+
+                     @include sm {
+                        font: 17px $Bold;
+                        margin-bottom: 14px;
+                     }
+
+                     @include xs {
+                        font: 12px $Bold;
+                        margin-bottom: 5px;
+                     }
+                  }
+
+                  p {
+                     font-size: 14px;
+                     line-height: 16px;
+                     color: #474747;
+
+                     @include xs {
+                        margin-top: 5px;
+                        font: 10px $Bold;
+                        line-height: 14px;
+
+                     }
+                  }
+               }
+
+               &__likes {
+                  &--messege {
+                     margin-right: 21px;
+
+                     @include lg {
+                        margin-right: 10px;
+                     }
+
+                     @include xs {
+                        margin-right: 5px;
+                     }
+
+                     span {
+                        display: block;
+                        font: 18px $Bold;
+                        color: #acacac;
+
+                        @include lg {
+                           font: 14px $Bold;
+                        }
+
+                        @include xs {
+                           font: 10px $Bold;
+                        }
+
+                     }
+
+                     i {
+                        font-size: 21px;
+                        margin-right: 7px;
+
+                        @include lg {
+                           font-size: 17px;
+                        }
+
+                        @include xs {
+                           font-size: 12px;
+                           margin-right: 5px;
+                        }
+                     }
+
+                     img {
+                        margin-right: 7px;
+                        width: 21px;
+                        height: 21px;
+
+                        @include lg {
+                           width: 15px;
+                           height: 15px;
+                        }
+                     }
+                  }
+               }
             }
-          }
-        }
+         }
       }
-    }
-  }
+   }
 
-  &-btn {
-    margin: 45px 0 64px;
-    @include lg {
-      margin: 20px 0 30px;
-    }
-    a {
-      max-width: 316px;
-      width: 100%;
-      background-color: #f2f2f2;
-      box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
-      border-radius: 9px;
-      padding: 15px 13px 19px;
-      font-size: 16px;
-      line-height: 19px;
-      color: #000000;
+   &-btn {
+      margin: 45px 0 64px;
+
       @include lg {
-        max-width: 250px;
-        padding: 10px;
+         margin: 20px 0 30px;
       }
 
-      i {
-        font-size: 23px;
+      a {
+         max-width: 316px;
+         width: 100%;
+         background-color: #f2f2f2;
+         box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+         border-radius: 9px;
+         padding: 15px 13px 19px;
+         font-size: 16px;
+         line-height: 19px;
+         color: #000000;
+
+         @include lg {
+            max-width: 250px;
+            padding: 10px;
+         }
+
+         i {
+            font-size: 23px;
+         }
       }
-    }
-  }
+   }
 }
+
 .populars {
-  &-list {
-    &__type {
-      &--img {
-        width: 280px;
-        height: 135px;
-        @include sm{
-          height: auto;
-        }
+   &-list {
+      &__type {
+         &--img {
+            width: 280px;
+            height: 135px;
+
+            @include sm {
+               height: auto;
+            }
+         }
       }
-    }
-  }
+   }
 
 }
-.recently-added {
-  margin-top: 31px;
-  @include sm{
-    margin-top: 15px;
-  }
-  @include xs{
-display: none;  }
-  &__list {
-    margin: 22px -19px 0;
-    @include sm{
-      margin: 18px -15px 0;
-    }
 
-    &--type {
-      width: 50%;
-      padding: 0 19px 20px;
-      @include sm{
-        padding: 0 15px 10px;
+.recently-added {
+   margin-top: 31px;
+
+   @include sm {
+      margin-top: 15px;
+   }
+
+   @include xs {
+      display: none;
+   }
+
+   &__list {
+      margin: 22px -19px 0;
+
+      @include sm {
+         margin: 18px -15px 0;
       }
-      &-form {
-        &__img {
-          width: 100%;
-          height: 274px;
-          @include sm{
-            height: auto;
-          }
-        }
+
+      &--type {
+         width: 50%;
+         padding: 0 19px 20px;
+
+         @include sm {
+            padding: 0 15px 10px;
+         }
+
+         &-form {
+            &__img {
+               width: 100%;
+               height: 274px;
+
+               @include sm {
+                  height: auto;
+               }
+            }
+         }
       }
-    }
-  }
+   }
 }
 
 .all-news {
-  @include xs{
-    margin: 10px 0;
-  }
-  &__list {
-    margin: 22px -15px 0;
-    @include xs{
-      flex-direction: column;
+   @include xs {
       margin: 10px 0;
-    }
-    &--type {
-      width: 33.3%;
-      padding: 0 15px;
-      @include xs{
-       width: 100%;
-        margin: 5px 0;
-        padding: 0;
+   }
+
+   &__list {
+      margin: 22px -15px 0;
+
+      @include xs {
+         flex-direction: column;
+         margin: 10px 0;
       }
-      &-form {
-        @include xs{
-          display: flex;
-          flex-direction: unset;
-        }
-        &__img {
-          width: 100%;
-          height: 175px;
-          @include sm{
-            height: auto;
-          }
-          @include xs{
-            height: auto;
-            max-width: 170px;
-          }
-        }
-        &--likes {
-          margin-top: 22px;
-          @include xs{
-            margin-top: 5px;
-          }
-          span {
-            font-size: 14px;
-            color: #acacac;
-            @include xs{
-              font-size: 10px;
+
+      &--type {
+         width: 33.3%;
+         padding: 0 15px;
+
+         @include xs {
+            width: 100%;
+            margin: 5px 0;
+            padding: 0;
+         }
+
+         &-form {
+
+            &__img {
+               width: 100%;
+               height: 175px;
+
+               @include sm {
+                  height: auto;
+               }
+
+               @include xs {
+                  height: auto;
+                  max-width: 170px;
+               }
             }
-          }
-        }
+
+            &--likes {
+               margin-top: 22px;
+
+               @include xs {
+                  margin-top: 5px;
+               }
+
+               span {
+                  font-size: 14px;
+                  color: #acacac;
+
+                  @include xs {
+                     font-size: 10px;
+                  }
+               }
+            }
+         }
       }
-    }
-  }
-  &__button{
-    display: none;
-    @include xs{
-      display: flex;
+   }
+
+   &__button {
+      display: none;
+
+      @include xs {
+         display: flex;
       }
-  }
+   }
 }
-@include xs{
-.all-news__mobile{
-  display: none;
+
+@include xs {
+   .all-news__mobile {
+      display: none;
+   }
 }
-}
+
 .email-list__none {
-  @include xs{
-  display: none;
-  }
+   @include xs {
+      display: none;
+   }
 }

@@ -1,109 +1,135 @@
 @import "../../styles/base/shared";
 
 .footer {
-  background-color: #e4e4e4;
-  &-block {
-    padding: 16px 40px 58px 284px;
-    @include lg {
-      padding: 16px 20px 38px 150px;
-    }
-    @include sm {
-      padding: 10px 0;
-    }
-    @include sm {
-      flex-direction: column;
-    }
-    &__media {
-      & > p {
-        font: 20px $Bold;
-        color: #515151;
-        margin-bottom: 14px;
-        @include lg {
-          font: 15px $Bold;
-        }
-        @include xs {
-          font: 13px $Bold;
-          margin-bottom: 10px;
-        }
+   background-color: #e4e4e4;
+
+   &-block {
+      padding: 16px 40px 58px 284px;
+
+      @include lg {
+         padding: 16px 20px 38px 150px;
       }
-      &--list {
-        &-icons {
-          img {
-            width: 44px;
-            height: 44px;
+
+      @include sm {
+         padding: 10px 0;
+      }
+
+      @include sm {
+         flex-direction: column;
+      }
+
+      &__media {
+         &>p {
+            font: 20px $Bold;
+            color: #515151;
+            margin-bottom: 14px;
+
             @include lg {
-              width: 30px;
-              height: 30px;
+               font: 15px $Bold;
             }
-          }
-          @include xs {
-            border: 1px solid #31a8dc;
-            box-shadow: 0px 0px 3px 1px rgba(89, 179, 218, 0.5);
-            border-radius: 10px;
-            padding: 3px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+
+            @include xs {
+               font: 13px $Bold;
+               margin-bottom: 10px;
+            }
+         }
+
+         &--list {
+            &-icons {
+               img {
+                  width: 44px;
+                  height: 44px;
+
+                  @include lg {
+                     width: 30px;
+                     height: 30px;
+                  }
+               }
+
+               @include xs {
+                  border: 1px solid #31a8dc;
+                  box-shadow: 0px 0px 3px 1px rgba(89, 179, 218, 0.5);
+                  border-radius: 10px;
+                  padding: 3px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  margin-bottom: 10px;
+               }
+
+               &+a {
+                  margin-left: 29px;
+
+                  @include lg {
+                     margin-left: 20px;
+                  }
+
+                  @include xs {
+                     margin-left: 0;
+                     margin-top: 10px;
+                  }
+               }
+
+               &__info {
+                  display: none;
+
+                  p {
+                     font: 15px $Bold;
+                  }
+
+                  &--telegram {
+                     color: #29a0d3;
+                  }
+
+                  &--insta {
+                     color: #f24d58;
+                  }
+
+                  &--fb {
+                     color: #0059A5;
+                  }
+
+                  span {
+                     font: 11px $Bold;
+                     color: #949494;
+                  }
+
+                  @include xs {
+                     display: block;
+                     margin-left: 5px;
+                  }
+               }
+            }
+         }
+      }
+
+      &__politic {
+         a {
+            font-size: 12px;
+            text-decoration-line: underline;
+            color: #1e6eb7;
+
+            &+a {
+               margin-left: 50px;
+
+               @include xs {
+                  margin-left: 0;
+               }
+            }
+         }
+
+         @include xs {
+            flex-direction: column;
             margin-bottom: 10px;
-          }
-          & + a {
-            margin-left: 29px;
-            @include lg {
-              margin-left: 20px;
-            }
-            @include xs {
-              margin-left: 0;
-              margin-top: 10px;
-            }
-          }
-          &__info {
-            display: none;
-            p {
-              font: 15px $Bold;
-            }
-            &--telegram {
-              color: #29a0d3;
-            }
-            &--insta {
-              color: #f24d58;
-            }
-            &--fb {
-                color: #0059A5;              }
-            span {
-              font: 11px $Bold;
-              color: #949494;
-            }
-            @include xs {
-              display: block;
-              margin-left: 5px;
-            }
-          }
-        }
+         }
       }
-    }
-    &__politic {
-      a {
-        font-size: 12px;
-        text-decoration-line: underline;
-        color: #1e6eb7;
-        & + a {
-          margin-left: 50px;
-          @include xs{
-            margin-left: 0;
-          }
-        }
+
+      &__mail {
+         p {
+            font-size: 12px;
+            line-height: 14px;
+            color: #000000;
+         }
       }
-      @include xs {
-      flex-direction: column;
-      margin-bottom: 10px;
-      }
-    }
-    &__mail {
-      p {
-        font-size: 12px;
-        line-height: 14px;
-        color: #000000;
-      }
-    }
-  }
+   }
 }
