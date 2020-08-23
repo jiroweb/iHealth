@@ -1503,13 +1503,6 @@ body {
 
 .populars-list__type--img {
   width: 280px;
-  height: 135px;
-}
-
-@media (max-width: 1023.98px) {
-  .populars-list__type--img {
-    height: auto;
-  }
 }
 
 .recently-added {
