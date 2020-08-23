@@ -1,4 +1,4 @@
-@import "./shared", "./normalize", "./flex-box", "./root", "./icons",
+@import "./shared", "./normalize", "./flex-box", "./icons",
 // modules
 "../modules/slick-slider";
 
@@ -6,16 +6,8 @@
 .container {
    max-width: 1400px;
    width: 100%;
-   padding: 0 22px;
+   padding: 0 15px;
    margin: 0 auto;
-
-   @include lg {
-      padding: 0 15px;
-   }
-
-   @include xs {
-      padding: 0 10px;
-   }
 }
 
 // container  -- END
@@ -62,3 +54,11 @@
 }
 
 // // overflow-hidden -- END
+
+
+
+.bg-cover{
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+}

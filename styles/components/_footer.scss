@@ -105,7 +105,7 @@
 
       &__politic {
          a {
-            font-size: 12px;
+            font: 12px $Regular;
             text-decoration-line: underline;
             color: #1e6eb7;
 
@@ -126,8 +126,7 @@
 
       &__mail {
          p {
-            font-size: 12px;
-            line-height: 14px;
+            font: 12px/14px $Regular;
             color: #000000;
          }
       }

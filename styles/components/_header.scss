@@ -6,6 +6,23 @@
    height: 25px;
    position: relative;
 
+   @include xs {
+      display: flex;
+         
+      span{
+         &:nth-child(1){
+            top: 0;
+         }
+         &:nth-child(2){
+            top: 50%;
+            transform: translateY(-50%);
+         }
+         &:nth-child(3){
+            bottom: 0;
+         }
+      }
+   }
+
    span {
       position: absolute;
       height: 4px;
@@ -13,7 +30,6 @@
       width: 100%;
       -webkit-border-radius: 5px;
       border-radius: 5px;
-      top: 0;
       -webkit-transition: 0.3s;
       -o-transition: 0.3s;
       transition: 0.3s;
@@ -22,13 +38,12 @@
 
 
 .close-menu {
-   display: none;
    width: 35px;
    height: 35px;
    border-radius: 50%;
    background: white;
    position: absolute;
-   left: 30px;
+   left: 15px;
 
    span {
       display: none;
@@ -44,68 +59,6 @@
    }
 }
 
-.anim-menu {
-   opacity: 1 !important;
-   visibility: visible !important;
-}
-
-@include xs {
-
-   .open-menu span:nth-child(2),
-   .open-menu span:nth-child(3) {
-      top: 10px;
-   }
-
-   .open-menu span:last-child {
-      top: 20px;
-   }
-
-   .open-menu {
-      display: flex;
-      position: absolute;
-      z-index: 999999999;
-      top: 50%;
-      transform: translateY(-50%);
-   }
-
-   .close-menu {
-      top: -9px;
-   }
-
-   .menu-cnt {
-      margin: 0;
-      height: 100%;
-      width: 0;
-      position: fixed;
-      z-index: 9999;
-      top: 0;
-      left: 0;
-      overflow-x: hidden;
-      padding-top: 60px;
-      background-color: #258B66;
-
-      ul {
-         flex-direction: column;
-         align-items: flex-start;
-         margin-bottom: 10px;
-         height: auto;
-      }
-   }
-
-
-   .header-menu-block {
-      -webkit-box-pack: start;
-      -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-      justify-content: flex-start;
-      -webkit-box-align: start;
-      -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-      align-items: flex-start;
-   }
-
-
-}
 
 .header {
 
@@ -175,30 +128,21 @@
                }
 
                p {
-                  font-size: 20px;
-                  line-height: 23px;
+                  font: 20px $Regular;
                   color: #000000;
-
-                  @include sm {
-                     font-size: 18px;
-                     line-height: 18px;
-                  }
 
                   @include xs {
                      font-size: 12px;
-                     line-height: 12px;
                   }
 
                }
 
                span {
-                  font-size: 12px;
-                  line-height: 14px;
+                  font: 12px $Regular;
                   color: #000000;
 
                   @include xs {
                      font-size: 9px;
-                     line-height: 12px;
                   }
                }
 
@@ -234,26 +178,53 @@
       background-color: #2a9f37;
       z-index: 9;
       position: relative;
-      height: 53px;
-      
-      @include sm {
-         height: auto;
-      }
 
       @include xs {
-         display: flex;
-         width: 100%;
-         justify-content: space-between;
-         height: 53px;
+
+         &__menu{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+         }
 
       }
 
+      
+
       &__box {
-         height: 100%;
 
          @include xs {
-            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translateX(-100%);
+            width: 100%;
+            height: 100vh;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            background-color: #2a9f37;
+            padding-bottom: 26px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            transition: all .3s;
+            z-index: 9999999;
+
+            &.active {
+               transform: translateX(0);
+               display: block;
+            }
+
+            &--mob{
+               position: relative;
+               padding: 20px 15px;
+               display: flex;
+               background-color: #00860f;
+            }
+
          }
+
+         
 
          &--list {
             max-width: 685px;
@@ -261,8 +232,11 @@
             height: 100%;
             position: relative;
 
-            @include sm {
-               max-width: 550px;
+            @include xs {
+               max-width: 100%;
+               height: auto;
+               padding-bottom: 26px;
+               flex-direction: column;
             }
 
             &-catalog {
@@ -281,15 +255,23 @@
                   color: #e1a56d;
                   transition: 0.3s;
 
+                  .icon-arrow-down {
+                     transform: rotate(0);
+                  }
+
                   &::before {
                      display: block;
+
+                     @include xs {
+                        display: none;
+                     }
                   }
                }
 
                &__parts {
                   font: 14px $Bold;
                   color: #ffffff;
-                  padding: 18px 0 18px;
+                  padding: 18px 13px;
                   position: relative;
 
                   &:before {
@@ -305,19 +287,17 @@
                      margin: auto;
                      transform: rotate(45deg);
                      display: none;
-
-                     @include lg {
-                        display: none;
-                     }
                   }
 
                   @include sm {
-                     font: 12px $Bold;
+                     font-size: 12px;
+                     padding: 18px 8px;
                   }
 
                   @include xs {
                      justify-content: space-between;
-                     font: 16px $Bold;
+                     font-size: 16px;
+                     padding: 18px 11px 18px 45px;
                   }
 
                   .icon-arrow-down {
@@ -327,9 +307,10 @@
                      @include xs {
                         font-size: 8px;
                         transform: rotate(-90deg);
-
                      }
                   }
+
+
                }
 
                &__submenu {
@@ -338,7 +319,7 @@
                   width: 685px;
                   top: 100%;
                   background-color: #ececec;
-                  padding: 44px 78px;
+                  padding: 39px 73px;
 
                   @include lg {
                      width: 550px;
@@ -349,7 +330,21 @@
                      padding: 20px 30px;
                   }
 
+                  @include xs {
+                     width: 100%;
+                     position: unset;
+                     flex-wrap: wrap;
+                  }
+
                   &--item {
+
+                     width: 25%;
+                     padding: 5px;
+
+                     @include xs {
+                        width: 50%;
+                     }
+
                      &-block {
                         li {
                            &+li {
@@ -392,6 +387,12 @@
       }
 
       &__btn {
+
+         @include xs {
+            width: 100%;
+            text-align: center;
+         }
+
          button {
             border: 1px solid #ffffff;
             box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.6);
@@ -399,24 +400,18 @@
             padding: 6px 25px;
             font: 14px $Bold;
             color: #ffffff;
-
-            @include sm {
-               padding: 3px 12px;
-               font: 12px "Roboto-Bold", sans-serif;
-            }
-
-            @include xs {
-               padding: 7px 15px;
-               font: 15px "Roboto-Bold", sans-serif;
-            }
          }
       }
 
       &__mobile {
-         height: 100%;
-         display: none;
 
          &--logo {
+
+            @include xs {
+               display: block;
+
+            }
+
             &-img {
                width: 74px;
             }
@@ -424,6 +419,11 @@
 
          &--share {
             color: white;
+
+            @include xs {
+               display: inline-flex;
+
+            }
 
             p {
                font: 11px $Bold;
@@ -437,11 +437,7 @@
             }
          }
 
-         @include xs {
-            display: flex;
-            width: 65%;
 
-         }
       }
    }
 }

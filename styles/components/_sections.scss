@@ -44,7 +44,7 @@
 
          @include xs {
             background-color: #FFCF55;
-            margin: 0 -10px;
+            margin: 0 -15px;
             padding-top: 10px;
          }
 
@@ -89,7 +89,7 @@
                      margin-top: 10px;
 
                      h5 {
-                        font-size: 16px;
+                        font: 15px/19px $Regular;
                         line-height: 19px;
                         color: #5b76ff;
                      }
@@ -98,7 +98,7 @@
                         margin: 3px 0 12px;
 
                         p {
-                           font-size: 12px;
+                           font: 12px $Regular;
                            color: #000000;
                         }
 
@@ -130,10 +130,11 @@
       }
 
       &__rightbar {
-         padding-left: 42px;
-         width: 100%;
+         padding-left: 75px;
+         width: calc(100% - 188px);
 
          @include sm {
+            width: 100%;
             padding-left: 0;
          }
 
@@ -235,7 +236,7 @@
 
             input {
                width: 200px;
-               font-size: 14px;
+               font: 14px $Regular;
                background: #fff7f7;
 
                @include xs {
@@ -321,9 +322,15 @@
                   }
 
                   p {
-                     font-size: 14px;
-                     line-height: 16px;
+                     font: 14px/16px $Regular;
                      color: #474747;
+
+                     display: block;
+                     display: -webkit-box;
+                     -webkit-line-clamp: 4;
+                     -webkit-box-orient: vertical;
+                     overflow: hidden;
+                     text-overflow: ellipsis;
 
                      @include xs {
                         margin-top: 5px;
@@ -406,8 +413,7 @@
          box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
          border-radius: 9px;
          padding: 15px 13px 19px;
-         font-size: 16px;
-         line-height: 19px;
+         font: 16px $Regular;
          color: #000000;
 
          @include lg {
@@ -424,7 +430,19 @@
 
 .populars {
    &-list {
+
+      @include xs {
+         &+& {
+            margin-left: 11px;
+         }
+      }
+
       &__type {
+
+         @include xs {
+            display: block;
+         }
+
          &--img {
             width: 280px;
             height: 135px;
@@ -445,10 +463,6 @@
       margin-top: 15px;
    }
 
-   @include xs {
-      display: none;
-   }
-
    &__list {
       margin: 22px -19px 0;
 
@@ -464,13 +478,33 @@
             padding: 0 15px 10px;
          }
 
+         @include xs {
+            width: 100%;
+         }
+
          &-form {
+
+            @include xs {
+               display: flex;
+            }
+
             &__img {
                width: 100%;
                height: 274px;
 
                @include sm {
                   height: auto;
+               }
+
+               @include xs {
+                  width: 106px;
+               }
+            }
+
+            &__info {
+
+               @include xs {
+                  width: calc(100% - 106px);
                }
             }
          }
@@ -510,11 +544,6 @@
                @include sm {
                   height: auto;
                }
-
-               @include xs {
-                  height: auto;
-                  max-width: 170px;
-               }
             }
 
             &--likes {
@@ -525,7 +554,7 @@
                }
 
                span {
-                  font-size: 14px;
+                  font: 14px $Regular;
                   color: #acacac;
 
                   @include xs {

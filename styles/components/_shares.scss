@@ -6,10 +6,13 @@
          &--slide {
             &-list {
                &__item {
+                  position: relative;
                   &--main {
+
                      &-img {
                         width: 100%;
                         height: 300px;
+                        display: block;
 
                         @include sm {
                            height: 200px;
@@ -93,8 +96,7 @@
                         }
 
                         &>p {
-                           font-size: 14px;
-                           line-height: 16px;
+                           font: 14px/16px $Regular;
                            color: #000000;
                            margin-bottom: 40px;
 
@@ -133,7 +135,7 @@
                                  background: #ff9900;
                                  border-radius: 12px;
                                  color: white;
-                                 font-size: 20px;
+                                 font: 20px $Regular;
                                  padding: 6px 39px;
 
                                  @include sm {
@@ -232,7 +234,7 @@
                            }
 
                            span {
-                              font-size: 12px;
+                              font: 12px $Regular;
                               color: #949494;
                               margin-bottom: 8px;
                               display: block;
@@ -259,8 +261,7 @@
                            }
 
                            p {
-                              font-size: 14px;
-                              line-height: 16px;
+                              font: 14/16px $Regular;
                               color: #000000;
 
                               @include sm {
@@ -279,8 +280,7 @@
 
                      &-share {
                         &__main {
-                           font-size: 12px;
-                           line-height: 14px;
+                           font: 12px $Regular;
                            color: #898989;
 
                            i {
@@ -298,7 +298,7 @@
                            }
 
                            span {
-                              font-size: 12px;
+                              font: 12px $Regular;
                               color: #000000;
 
                               @include xs {

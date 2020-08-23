@@ -3,7 +3,7 @@
 .articles {
    &-main {
       &__text {
-         margin: 0 30px 45px;
+         margin: 0 70px 45px;
          position: relative;
 
          @include sm {
@@ -45,7 +45,7 @@
             }
 
             &-share {
-               font-size: 14px;
+               font: 14px $Regular;
                color: #acacac;
 
                @include xs {
@@ -95,13 +95,11 @@
                }
 
                p {
-                  font-size: 16px;
-                  line-height: 19px;
+                  font: 16px/19px $Regular;
                   color: #000000;
 
                   @include xs {
                      font-size: 14px;
-                     line-height: 16px;
                   }
 
                   &+p {
@@ -115,7 +113,7 @@
                   a {
                      text-decoration: underline;
                      color: #2a9f37;
-                     font-size: 16px;
+                     font: 16px $Regular;;
                   }
                }
             }
@@ -136,13 +134,11 @@
                }
 
                p {
-                  font-size: 16px;
-                  line-height: 19px;
+                  font: 16px/19px $Regular;
                   color: #000000;
 
                   @include xs {
                      font-size: 14px;
-                     line-height: 16px;
                   }
                }
             }
@@ -192,8 +188,7 @@
                   }
 
                   p {
-                     font-size: 12px;
-                     line-height: 14px;
+                     font: 12px $Regular;
                      color: #000000;
                   }
 
