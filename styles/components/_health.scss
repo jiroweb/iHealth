@@ -1,0 +1,31 @@
+@import "../../styles/base/shared";
+
+.health {
+   &-leftbar {
+      position: relative;
+
+      &::before {
+         position: absolute;
+         content: "";
+         border: 1px solid #cfcfcf;
+         height: 1265px;
+         right: -20%;
+         top: 10px;
+      }
+
+      @include sm {
+         display: none;
+      }
+
+      &__list {
+         &--block {
+            margin-bottom: 30px;
+
+            &-img {
+               width: 173px;
+
+            }
+         }
+      }
+   }
+}

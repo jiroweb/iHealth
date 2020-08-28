@@ -1,0 +1,62 @@
+.slick{
+    &-carousel{
+        position: relative;
+    }
+
+    &-list{
+        overflow: hidden;
+
+    }
+
+    &-track{
+        display: flex;
+        flex-wrap: nowrap;
+        cursor: default;
+    }
+}
+
+
+
+
+//ARROWS
+.slick {
+    
+    &-dots{
+        width: 100%;
+        position: absolute;
+        bottom: 15px;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+
+        li{
+            padding: 0 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            button{
+                color: transparent;
+                font-size: 0;
+                width: 17px;
+                height: 17px;
+                background-color: white;
+                border-radius: 50%;
+
+                @include xs{
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+
+            &.slick-active button{
+                background-color: #8C8C8C;
+            }
+        }
+    }
+}
+
+
+
+
+
